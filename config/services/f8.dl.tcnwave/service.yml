@@ -8,4 +8,4 @@ launch:
   - -m
   - f8pydl.main_tcnwave
   env: {}
-  workdir: ../../..
+  workdir: ${F8_PACKAGE_ROOT}
