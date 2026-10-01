@@ -3,7 +3,7 @@
 This repository owns its source, tests, `extension.json`, service manifests and model metadata.
 The Studio superbuild can check it out unchanged at `extensions/f8pydl`.
 
-The SDK source revision used by CI is `4a05364dddfd50a14725836f2867cab327512f0d`. Checkout `feel8-fun/f8studio` at that
+The SDK source revision used by CI is `3ca1ae3bf65709e533d907e776131da237e24919`. Checkout `feel8-fun/f8sdk` at that
 revision into `.sdk` before `pixi install`; only the public SDK is a runtime dependency.
 Use the commands in `.github/workflows/quality.yml` for local build/test parity.
 
