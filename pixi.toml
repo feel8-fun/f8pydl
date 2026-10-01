@@ -1,0 +1,20 @@
+[workspace]
+name = "f8pydl"
+channels = ["conda-forge"]
+platforms = ["win-64", {name = "linux-glibc228", platform = "linux-64", glibc = "2.28"}]
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+pip = ">=26,<27"
+pytest = ">=8.4.2,<9"
+
+
+[pypi-dependencies]
+f8pysdk = {path = ".sdk/packages/f8pysdk", editable = false}
+hatchling = ">=1.28,<2"
+basedpyright = ">=1.31,<2"
+ruff = ">=0.12,<0.13"
+f8pydl = {path = ".", editable = true}
+
+[tasks]
+check = "python -m f8pysdk.extension_packaging --check"
