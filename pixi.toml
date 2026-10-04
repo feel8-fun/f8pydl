@@ -7,9 +7,13 @@ platforms = ["win-64", {name = "linux-glibc228", platform = "linux-64", glibc = 
 python = ">=3.14.3,<3.15"
 pip = ">=26,<27"
 pytest = ">=8.4.2,<9"
+cuda-version = "12.*"
+cuda-libraries = "12.*"
+cudnn = ">=9,<10"
 
 
 [pypi-dependencies]
+onnxruntime-gpu = ">=1.24.2,<2"
 f8pysdk = {path = ".sdk/python", editable = false}
 hatchling = ">=1.28,<2"
 basedpyright = ">=1.31,<2"
@@ -18,3 +22,24 @@ f8pydl = {path = ".", editable = true}
 
 [tasks]
 check = "python -m f8pysdk.extension_packaging --check"
+
+[tasks.f8pydl_classifier]
+cmd = "python -m f8pydl.main_classifier"
+
+[tasks.f8pydl_detector]
+cmd = "python -m f8pydl.main_detector"
+
+[tasks.f8pydl_detsorter]
+cmd = "python -m f8pydl.main_detsorter"
+
+[tasks.f8pydl_humandetector]
+cmd = "python -m f8pydl.main_humandetector"
+
+[tasks.f8pydl_optflow]
+cmd = "python -m f8pydl.main_optflow"
+
+[tasks.f8pydl_tcnwave]
+cmd = "python -m f8pydl.main_tcnwave"
+
+[environments]
+dl = []

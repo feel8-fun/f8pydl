@@ -16,7 +16,7 @@
       ],
       "runtime": {
         "kind": "workspace",
-        "environment": "onnx"
+        "environment": "dl"
       },
       "modelDirectories": [
         "onnx"

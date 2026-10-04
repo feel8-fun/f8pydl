@@ -7,8 +7,10 @@ The SDK source revision used by CI is `d0e42420d31bc8b5bf760be132a35df953d34e49`
 revision into `.sdk` before `pixi install`; only the public SDK is a runtime dependency.
 Use the commands in `.github/workflows/quality.yml` for local build/test parity.
 
-Python releases contain this package's wheel contents and reuse the official environment
-named by `extension.json`. Native releases contain deployed executables and their runtime
+Python releases contain this package's wheel contents and its publisher-owned locked
+workspace. Environment names and counts are local publisher choices; `extension.json`
+selects the default environment. The SDK builder converts source `workspace` inputs
+to an independent Pixi runtime, or accepts a prepared `--runtime-root`. Native releases contain deployed executables and their runtime
 libraries. `python -m f8pysdk.extension_packaging` verifies the real `--describe` entrypoints,
 then produces an importable ZIP and its SHA-256. No editable source path is included.
 
