@@ -20,7 +20,8 @@
       },
       "modelDirectories": [
         "onnx"
-      ]
+      ],
+      "resources": [{"resourceId": "onnx-models", "path": "${F8_PACKAGE_ROOT}/resources/models/onnx/README.md", "description": "ONNX model definitions and download settings."}]
     }
   ]
 }
