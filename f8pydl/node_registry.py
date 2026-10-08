@@ -162,6 +162,8 @@ def _common_state_fields(
 ) -> list[F8StateSpec]:
     fields = [
         F8StateSpec(
+            persistent=True,
+            publishable=False,
             name="weightsDir",
             label="Weights Dir",
             description="Directory containing *.yaml + *.onnx model files. Empty uses the installed model directory.",
@@ -182,6 +184,8 @@ def _common_state_fields(
             showOnNode=True,
         ),
         F8StateSpec(
+            persistent=True,
+            publishable=False,
             name="modelYamlPath",
             label="Model YAML Path",
             description="Optional explicit model yaml path (overrides modelId). Cleared when exporting publish JSON.",
@@ -336,6 +340,8 @@ def _optflow_state_fields() -> list[F8StateSpec]:
             showOnNode=False,
         ),
         F8StateSpec(
+            persistent=True,
+            publishable=False,
             name="weightsDir",
             label="Weights Dir",
             description="Directory containing *.yaml + *.onnx model files. Empty uses the installed model directory.",
@@ -356,6 +362,8 @@ def _optflow_state_fields() -> list[F8StateSpec]:
             showOnNode=False,
         ),
         F8StateSpec(
+            persistent=True,
+            publishable=False,
             name="modelYamlPath",
             label="Model YAML Path",
             description="Optional explicit model yaml path (overrides modelId). Cleared when exporting publish JSON.",
